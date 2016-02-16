@@ -428,19 +428,18 @@
                 "h": 66
             }
         },
-        drawMap: function(selector) {
-            var globalThis = this;
+        render: function(selector) {
             if (!this.width) {
                 this.width = d3.select(selector).node().getBoundingClientRect().width;
                 this.height = this.width * 0.66371681415;
             }
-            var mapSvg = d3.select(selector)
+            this.svg = d3.select(selector)
                 .append('svg')
                 .attr('width', this.width)
                 .attr('height', this.height)
                 .attr('viewBox', '0 0 858.8 570');
 
-            var map = mapSvg.selectAll('rect')
+            this.map = this.svg.selectAll('rect')
                 .data(d3.values(this.stateData))
                 .enter()
                 .append('rect')
@@ -456,10 +455,15 @@
                 .attr('y', function(d) {
                     return d.y;
                 });
-
-            map.each(function(d) {
+                if (this.labels) {
+                    this.addLabels(this.svg);
+                }
+        },
+        addLabels: function(svg) {
+            var globalThis = this;
+            this.map.each(function(d) {
                 var box = this.getBBox();
-                mapSvg.append('text')
+                svg.append('text')
                     .text(d[globalThis.labelStyle])
                     .attr('x', box.x + (box.width/2))
                     .attr('y', box.y + (box.height/2))
@@ -470,17 +474,14 @@
                     .style('font-family', globalThis.labelTypeface);
             });
         },
-        setColors: function(color) {
-            this.colorSet = color;
-            return this;
-        },
-        setColorNumber: function(number) {
-            this.colorNumber = number;
-            return this;
-        },
-        setWidth: function(width) {
-            this.width = width;
-            this.height = this.width * 0.66371681415;
+        setAttr: function(attr) {
+            for (var key in attr) {
+                if (key in this) {
+                    this[key] = attr[key];
+                } else {
+                    throw new Error("Property '" + key + "' does not exist.");
+                }
+            }
             return this;
         }
     }

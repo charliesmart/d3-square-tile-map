@@ -23,6 +23,7 @@ d3.squareMap.setAttr({
 }).render('.map-container');
 ```
 The following table contains a list of all modifiable properties.
+
 |Property     |Description       |Default        |
 |-------------|------------------|---------------|
 |`width`      |Width of the map. When it is set to `null`, the map fills the width of its containing element|`null`|

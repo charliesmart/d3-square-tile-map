@@ -12,7 +12,7 @@
                 "abbr": "AK",
                 "full": "Alaska",
                 "ap": "Alaska",
-                "x": 54,
+                "x": 48,
                 "y": 90,
                 "w": 66,
                 "h": 66
@@ -430,10 +430,11 @@
             }
         },
         drawMap: function(selector) {
+            var globalThis = this;
             if (!this.width) {
                 this.width = d3.select(selector).attr('width');
             }
-            if (!this.width) {
+            if (!this.height) {
                 this.height = d3.select(selector).attr('height');
             }
             var mapSvg = d3.select(selector)
@@ -460,35 +461,30 @@
                 });
 
             map.each(function(d) {
-                console.log(this.labelStyle);
-                console.log(d['ap']);
                 var box = this.getBBox();
                 mapSvg.append('text')
-                    .text(d[this.labelStyle])
+                    .text(d[globalThis.labelStyle])
                     .attr('x', box.x + (box.width/2))
                     .attr('y', box.y + (box.height/2))
                     .attr('class', 'state-label')
                     .attr('text-anchor', 'middle')
                     .attr('alignment-baseline', 'middle')
-                    .style('fill', 'white');
+                    .style('fill', 'white')
+                    .style('font-family', globalThis.labelTypeface);
             });
         },
-
         setColors: function(color) {
             this.colorSet = color;
             return this;
         },
-
         setColorNumber: function(number) {
             this.colorNumber = number;
             return this;
         },
-
         setWidth: function(width) {
             this.width = width;
             return this;
         },
-
         setHeight: function(height) {
             this.height = height;
             return this;

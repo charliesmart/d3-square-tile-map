@@ -1,7 +1,6 @@
 (function() {
     d3.squareMap = {
         width: null,
-        height: null,
         colorSet: 'Blues',
         colorNumber: 6,
         labels: true,
@@ -12,8 +11,8 @@
                 "abbr": "AK",
                 "full": "Alaska",
                 "ap": "Alaska",
-                "x": 48,
-                "y": 90,
+                "x": 0,
+                "y": 72,
                 "w": 66,
                 "h": 66
             },
@@ -21,8 +20,8 @@
                 "abbr": "AL",
                 "full": "Alabama",
                 "ap": "Ala.",
-                "x": 552,
-                "y": 450,
+                "x": 504,
+                "y": 432,
                 "w": 66,
                 "h": 66
             },
@@ -30,8 +29,8 @@
                 "abbr": "AR",
                 "full": "Arkansas",
                 "ap": "Ark.",
-                "x": 408,
-                "y": 378,
+                "x": 360,
+                "y": 360,
                 "w": 66,
                 "h": 66
             },
@@ -39,8 +38,8 @@
                 "abbr": "AZ",
                 "full": "Arizona",
                 "ap": "Ariz.",
-                "x": 192,
-                "y": 378,
+                "x": 144,
+                "y": 360,
                 "w": 66,
                 "h": 66
             },
@@ -48,8 +47,8 @@
                 "abbr": "CA",
                 "full": "California",
                 "ap": "Calif.",
-                "x": 120,
-                "y": 306,
+                "x": 72,
+                "y": 288,
                 "w": 66,
                 "h": 66
             },
@@ -57,8 +56,8 @@
                 "abbr": "CO",
                 "full": "Colorado",
                 "ap": "Colo.",
-                "x": 264,
-                "y": 306,
+                "x": 216,
+                "y": 288,
                 "w": 66,
                 "h": 66
             },
@@ -66,8 +65,8 @@
                 "abbr": "CT",
                 "full": "Connecticut",
                 "ap": "Conn.",
-                "x": 768,
-                "y": 234,
+                "x": 720,
+                "y": 216,
                 "w": 66,
                 "h": 66
             },
@@ -75,8 +74,8 @@
                 "abbr": "DC",
                 "full": "Washington, D.C.",
                 "ap": "D.C.",
-                "x": 696,
-                "y": 378,
+                "x": 648,
+                "y": 360,
                 "w": 66,
                 "h": 66
             },
@@ -84,8 +83,8 @@
                 "abbr": "DE",
                 "full": "Delaware",
                 "ap": "Del.",
-                "x": 768,
-                "y": 306,
+                "x": 720,
+                "y": 288,
                 "w": 66,
                 "h": 66
             },
@@ -93,8 +92,8 @@
                 "abbr": "FL",
                 "full": "Florida",
                 "ap": "Fla.",
-                "x": 696,
-                "y": 522,
+                "x": 648,
+                "y": 504,
                 "w": 66,
                 "h": 66
             },
@@ -102,8 +101,8 @@
                 "abbr": "GA",
                 "full": "Georgia",
                 "ap": "Ga.",
-                "x": 624,
-                "y": 450,
+                "x": 576,
+                "y": 432,
                 "w": 66,
                 "h": 66
             },
@@ -111,320 +110,320 @@
                 "abbr": "HI",
                 "full": "Hawaii",
                 "ap": "Hawaii",
-                "x": 120,
-                "y": 522,
+                "x": 72,
+                "y": 504,
                 "w": 66,
                 "h": 66
             },
             "IA": {
                 "full": "Iowa",
                 "ap": "Iowa",
-                "x": 408,
-                "y": 234,
+                "x": 360,
+                "y": 216,
                 "w": 66,
                 "h": 66
             },
             "ID": {
                 "full": "Idaho",
                 "ap": "Idaho",
-                "x": 192,
-                "y": 162,
+                "x": 144,
+                "y": 144,
                 "w": 66,
                 "h": 66
             },
             "IL": {
                 "full": "Illinois",
                 "ap": "Ill.",
-                "x": 480,
-                "y": 162,
+                "x": 432,
+                "y": 144,
                 "w": 66,
                 "h": 66
             },
             "IN": {
                 "full": "Indiana",
                 "ap": "Ind.",
-                "x": 480,
-                "y": 234,
+                "x": 432,
+                "y": 216,
                 "w": 66,
                 "h": 66
             },
             "KS": {
                 "full": "Kansas",
                 "ap": "Kan.",
-                "x": 336,
-                "y": 378,
+                "x": 288,
+                "y": 360,
                 "w": 66,
                 "h": 66
             },
             "KY": {
                 "full": "Kentucky",
                 "ap": "Ky.",
-                "x": 480,
-                "y": 306,
+                "x": 432,
+                "y": 288,
                 "w": 66,
                 "h": 66
             },
             "LA": {
                 "full": "Louisiana",
                 "ap": "La.",
-                "x": 408,
-                "y": 450,
+                "x": 360,
+                "y": 432,
                 "w": 66,
                 "h": 66
             },
             "MA": {
                 "full": "Massachusetts",
                 "ap": "Mass.",
-                "x": 768,
-                "y": 162,
+                "x": 720,
+                "y": 144,
                 "w": 66,
                 "h": 66
             },
             "MD": {
                 "full": "Maryland",
                 "ap": "Md.",
-                "x": 696,
-                "y": 306,
+                "x": 648,
+                "y": 288,
                 "w": 66,
                 "h": 66
             },
             "ME": {
                 "full": "Maine",
                 "ap": "Maine",
-                "x": 840.8,
-                "y": 18,
+                "x": 792.8,
+                "y": 0,
                 "w": 66,
                 "h": 66
             },
             "MI": {
                 "full": "Michigan",
                 "ap": "Mich",
-                "x": 552,
-                "y": 162,
+                "x": 504,
+                "y": 144,
                 "w": 66,
                 "h": 66
             },
             "MN": {
                 "full": "Minnesota",
                 "ap": "Minn.",
-                "x": 408,
-                "y": 162,
+                "x": 360,
+                "y": 144,
                 "w": 66,
                 "h": 66
             },
             "MO": {
                 "full": "Missouri",
                 "ap": "Mo.",
-                "x": 408,
-                "y": 306,
+                "x": 360,
+                "y": 288,
                 "w": 66,
                 "h": 66
             },
             "MS": {
                 "full": "Mississippi",
                 "ap": "Miss.",
-                "x": 480.5,
-                "y": 450,
+                "x": 432,
+                "y": 432,
                 "w": 66,
                 "h": 66
             },
             "MT": {
                 "full": "Montana",
                 "ap": "Mont.",
-                "x": 264,
-                "y": 162,
+                "x": 216,
+                "y": 144,
                 "w": 66,
                 "h": 66
             },
             "NC": {
                 "full": "North Carolina",
                 "ap": "N.C.",
-                "x": 552,
-                "y": 378,
+                "x": 504,
+                "y": 360,
                 "w": 66,
                 "h": 66
             },
             "ND": {
                 "full": "North Dakota",
                 "ap": "N.D.",
-                "x": 336,
-                "y": 162,
+                "x": 288,
+                "y": 144,
                 "w": 66,
                 "h": 66
             },
             "NE": {
                 "full": "Nebraska",
                 "ap": "Neb.",
-                "x": 336,
-                "y": 306,
+                "x": 288,
+                "y": 288,
                 "w": 66,
                 "h": 66
             },
             "NH": {
                 "full": "New Hampshire",
                 "ap": "N.H.",
-                "x": 840.8,
-                "y": 90,
+                "x": 792.8,
+                "y": 72,
                 "w": 66,
                 "h": 66
             },
             "NJ": {
                 "full": "New Jersey",
                 "ap": "N.J.",
-                "x": 696,
-                "y": 234,
+                "x": 648,
+                "y": 216,
                 "w": 66,
                 "h": 66
             },
             "NM": {
                 "full": "New Mexico",
                 "ap": "N.M.",
-                "x": 264,
-                "y": 378,
+                "x": 216,
+                "y": 360,
                 "w": 66,
                 "h": 66
             },
             "NV": {
                 "full": "Nevada",
                 "ap": "Nev.",
-                "x": 192,
-                "y": 234,
+                "x": 144,
+                "y": 216,
                 "w": 66,
                 "h": 66
             },
             "NY": {
                 "full": "New York",
                 "ap": "N.Y.",
-                "x": 696,
-                "y": 162,
+                "x": 648,
+                "y": 144,
                 "w": 66,
                 "h": 66
             },
             "OH": {
                 "full": "Ohio",
                 "ap": "Ohio",
-                "x": 552,
-                "y": 234,
+                "x": 504,
+                "y": 216,
                 "w": 66,
                 "h": 66
             },
             "OK": {
                 "full": "Oklahoma",
                 "ap": "Okla.",
-                "x": 336,
-                "y": 450,
+                "x": 288,
+                "y": 432,
                 "w": 66,
                 "h": 66
             },
             "OR": {
                 "full": "Oregon",
                 "ap": "Ore.",
-                "x": 120,
-                "y": 234,
+                "x": 72,
+                "y": 216,
                 "w": 66,
                 "h": 66
             },
             "PA": {
                 "full": "Pennsylvania",
                 "ap": "Pa.",
-                "x": 624,
-                "y": 234,
+                "x": 576,
+                "y": 216,
                 "w": 66,
                 "h": 66
             },
             "RI": {
                 "full": "Rhode Island",
                 "ap": "R.I.",
-                "x": 840.8,
-                "y": 234,
+                "x": 792.8,
+                "y": 216,
                 "w": 66,
                 "h": 66
             },
             "SC": {
                 "full": "South Carolina",
                 "ap": "S.C.",
-                "x": 624,
-                "y": 378,
+                "x": 576,
+                "y": 360,
                 "w": 66,
                 "h": 66
             },
             "SD": {
                 "full": "South Dakota",
                 "ap": "S.D.",
-                "x": 336,
-                "y": 234,
+                "x": 288,
+                "y": 216,
                 "w": 66,
                 "h": 66
             },
             "TN": {
                 "full": "Tennessee",
                 "ap": "Tenn.",
-                "x": 480.5,
-                "y": 378,
+                "x": 432,
+                "y": 360,
                 "w": 66,
                 "h": 66
             },
             "TX": {
                 "full": "Texas",
                 "ap": "Texas",
-                "x": 336,
-                "y": 522,
+                "x": 288,
+                "y": 504,
                 "w": 66,
                 "h": 66
             },
             "UT": {
                 "full": "Utah",
                 "ap": "Utah",
-                "x": 192,
-                "y": 306,
+                "x": 144,
+                "y": 288,
                 "w": 66,
                 "h": 66
             },
             "VA": {
                 "full": "Virginia",
                 "ap": "Va.",
-                "x": 624,
-                "y": 306,
+                "x": 576,
+                "y": 288,
                 "w": 66,
                 "h": 66
             },
             "VT": {
                 "full": "Vermont",
                 "ap": "Vt.",
-                "x": 768,
-                "y": 90,
+                "x": 720,
+                "y": 72,
                 "w": 66,
                 "h": 66
             },
             "WA": {
                 "full": "Washington",
                 "ap": "Wash.",
-                "x": 120,
-                "y": 162,
+                "x": 72,
+                "y": 144,
                 "w": 66,
                 "h": 66
             },
             "WI": {
                 "full": "Wisconsin",
                 "ap": "Wis.",
-                "x": 480.5,
-                "y": 90,
+                "x": 432,
+                "y": 72,
                 "w": 66,
                 "h": 66
             },
             "WV": {
                 "full": "West Virginia",
                 "ap": "W. Va.",
-                "x": 552,
-                "y": 306,
+                "x": 504,
+                "y": 288,
                 "w": 66,
                 "h": 66
             },
             "WY": {
                 "full": "Wyoming",
                 "ap": "Wyo.",
-                "x": 264,
-                "y": 234,
+                "x": 216,
+                "y": 216,
                 "w": 66,
                 "h": 66
             }
@@ -432,16 +431,14 @@
         drawMap: function(selector) {
             var globalThis = this;
             if (!this.width) {
-                this.width = d3.select(selector).attr('width');
-            }
-            if (!this.height) {
-                this.height = d3.select(selector).attr('height');
+                this.width = d3.select(selector).node().getBoundingClientRect().width;
+                this.height = this.width * 0.66371681415;
             }
             var mapSvg = d3.select(selector)
                 .append('svg')
                 .attr('width', this.width)
                 .attr('height', this.height)
-                .attr('viewBox', '0 0 960 611');
+                .attr('viewBox', '0 0 858.8 570');
 
             var map = mapSvg.selectAll('rect')
                 .data(d3.values(this.stateData))
@@ -483,10 +480,7 @@
         },
         setWidth: function(width) {
             this.width = width;
-            return this;
-        },
-        setHeight: function(height) {
-            this.height = height;
+            this.height = this.width * 0.66371681415;
             return this;
         }
     }

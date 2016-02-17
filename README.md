@@ -41,5 +41,5 @@ The following table contains a list of all modifiable properties.
 |`colorNumber`|Number of steps in ColorBrewer palette. |An integer between 3 and whatever the maximum of your chosen palette is. Usually between 9 and 12.|`6`|
 |`labels`     |Whether the map has labels on each state.|`true` or `false`|`true`|
 |`labelTypeface`|Font family of the state labels.|Any font family.|`sans-serif`|
-|`labelStyle`|The kind of labels used.|`abbr` Postal abbreviations (e.g. CT, NY, CA)<br>`ap` AP style (e.g. Conn., N.Y., Calif.)|`ap`|
-|`labelColor`|Color of the state labels.|Any color|`'white'`| 
+|`labelStyle`|The kind of labels used.|`abbr` (postal abbreviations e.g. CT, NY, CA)<br>`ap` (AP style e.g. Conn., N.Y., Calif.)|`ap`|
+|`labelColor`|Color of the state labels.|Any color|`'white'`|

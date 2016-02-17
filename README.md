@@ -1,6 +1,9 @@
 # d3-square-tile-map
 A map of the United States where each state is an equal sized square.
 
+### Getting Started
+Download and include either square-tile-map.js or square-tile-map.min.js. You'll also need to download and include Mike Bostock's [colorbrewer.js](https://github.com/mbostock/d3/tree/master/lib/colorbrewer), which is based on Cynthia Brewer's ColorBrewer palettes.
+
 ### Rendering the Map
 Create the element that will contain your map.
 ```html

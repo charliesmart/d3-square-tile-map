@@ -6,7 +6,10 @@
         labels: true,
         labelTypeface: 'sans-serif',
         labelStyle: 'ap',
-        stateData: {
+        labelColor: 'white',
+        data: [],
+        scale: d3.scale.quantize(),
+        states: {
             "AK": {
                 "abbr": "AK",
                 "full": "Alaska",
@@ -14,7 +17,8 @@
                 "x": 0,
                 "y": 72,
                 "w": 66,
-                "h": 66
+                "h": 66,
+                "stateData": null
             },
             "AL": {
                 "abbr": "AL",
@@ -428,7 +432,9 @@
                 "h": 66
             }
         },
-        render: function(selector) {
+        draw: function(selector) {
+            this.updateScaleRange();
+            this.updateScaleDomain();
             if (!this.width) {
                 this.width = d3.select(selector).node().getBoundingClientRect().width;
                 this.height = this.width * 0.66371681415;
@@ -438,9 +444,8 @@
                 .attr('width', this.width)
                 .attr('height', this.height)
                 .attr('viewBox', '0 0 858.8 570');
-
             this.map = this.svg.selectAll('rect')
-                .data(d3.values(this.stateData))
+                .data(d3.values(this.states))
                 .enter()
                 .append('rect')
                 .attr('width', function(d) {
@@ -454,24 +459,27 @@
                 })
                 .attr('y', function(d) {
                     return d.y;
+                }).attr('fill', function(d) {
+                    console.log(d3.squareMap.scale(d.stateData));
+                    return d3.squareMap.scale(d.stateData);
                 });
                 if (this.labels) {
                     this.addLabels(this.svg);
                 }
         },
         addLabels: function(svg) {
-            var globalThis = this;
+
             this.map.each(function(d) {
                 var box = this.getBBox();
                 svg.append('text')
-                    .text(d[globalThis.labelStyle])
+                    .text(d[d3.squareMap.labelStyle])
                     .attr('x', box.x + (box.width/2))
                     .attr('y', box.y + (box.height/2))
                     .attr('class', 'state-label')
                     .attr('text-anchor', 'middle')
                     .attr('alignment-baseline', 'middle')
-                    .style('fill', 'white')
-                    .style('font-family', globalThis.labelTypeface);
+                    .style('fill', d3.squareMap.labelColor)
+                    .style('font-family', d3.squareMap.labelTypeface);
             });
         },
         setAttr: function(attr) {
@@ -482,7 +490,33 @@
                     throw new Error("Property '" + key + "' does not exist.");
                 }
             }
+            this.colorScale.range([this.colorSet[this.colorNumber]]);
             return this;
+        },
+        render: function(data, selector) {
+
+            d3.csv(data, function(d) {
+                for (var key in d3.squareMap.states) {
+                    for (var j = 0; j < d.length; j++) {
+                        if (key == d[j].state) {
+                            d3.squareMap.states[key].stateData = d[j].data;
+                            d3.squareMap.data.push(+d[j].data);
+                        }
+                    }
+                }
+                d3.squareMap.draw(selector);
+            });
+        },
+        updateScaleRange: function() {
+            var palette = this.colorSet,
+                number = this.colorNumber;
+            this.scale.range(colorbrewer[palette][number]);
+        },
+        updateScaleDomain: function() {
+            var min = d3.min(this.data);
+            var max = d3.max(this.data);
+            this.scale.domain([min, max]);
         }
+
     }
 })();

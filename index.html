@@ -2,16 +2,12 @@
     <head>
         <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <script src="/square-tile-map.js"></script>
+        <script src="/colorbrewer.js"></script>
     </head>
     <body>
         <div class="map-container" style="width: 650;"></div>
         <script>
-            console.log(d3.squareMap.colorSet);
-            d3.squareMap.setAttr({
-                colorSet: 'Greens',
-                colorNumber: 4,
-                labels: false
-            }).render('.map-container');
+            d3.squareMap.render('states.csv', '.map-container');
         </script>
     </body>
 </html>

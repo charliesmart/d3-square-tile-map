@@ -27,6 +27,6 @@ The following table contains a list of all modifiable properties.
 |Property     |Description       |Values       |Default        |
 |-------------|------------------|-------------|---------------|
 |`width`      |Width of the map. When it is set to `null`, the map fills the width of its containing element.|Any number or `null`|`null`|
-|`colorSet`   |The ColorBrewer palette used for the map. |A string with the name of a ColorBrewer scale. Reference is [here](https://bl.ocks.org/mbostock/5577023).|`'Blues'`|
+|`colorSet`   |The ColorBrewer palette used for the map. |A string with the name of a ColorBrewer palette. Reference is [here](https://bl.ocks.org/mbostock/5577023).|`'Blues'`|
 |`colorNumber`|Number of steps in ColorBrewer palette. |An integer between 3 and whatever the maximum of your chosen palette is. Usually between 9 and 12.|`6`|
-|`labels`     |Whether the map has labels on each state.|`true` or `false`|`false`|
+|`labels`     |Whether the map has labels on each state.|`true` or `false`|`true`|

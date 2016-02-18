@@ -12,7 +12,7 @@ Create the element that will contain your map.
 ```
 Call `d3.squareMap.render()` on your container element. `render()` takes two arguments: the path to your CSV data set and your container element.
 ```javascript
-d3.squareMap.render('states.csv', '.map-container');
+d3.squareMap.render('data.csv', '.map-container');
 ```
 Be sure to render your map only *after* you have modified its properties.
 
@@ -34,7 +34,7 @@ To change properties of the map, use the `setAttr()` method. This method takes a
 d3.squareMap.setAttr({
     colorSet: 'Greens',
     labelStyle: 'full'
-}).render('.map-container');
+}).render('data.csv', '.map-container');
 ```
 The following table contains a list of all modifiable properties.
 
@@ -45,5 +45,5 @@ The following table contains a list of all modifiable properties.
 |`colorNumber`|Number of steps in ColorBrewer palette. |An integer between 3 and whatever the maximum of your chosen palette is. Usually between 9 and 12.|`6`|
 |`labels`     |Whether the map has labels on each state.|`true` or `false`|`true`|
 |`labelTypeface`|Font family of the state labels.|Any font family.|`sans-serif`|
-|`labelStyle`|The kind of labels used.|`abbr` (postal abbreviations e.g. CT, NY, CA)<br>`ap` (AP style e.g. Conn., N.Y., Calif.)|`ap`|
-|`labelColor`|Color of the state labels.|Any color|`'white'`|
+|`labelStyle`|The kind of labels used.|One of two strings:<br>`abbr` (postal abbreviations e.g. CT, NY, CA)<br>`ap` (AP style e.g. Conn., N.Y., Calif.)|`ap`|
+|`labelColor`|Color of the state labels.|Any color.|`'white'`|

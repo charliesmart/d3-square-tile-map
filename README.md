@@ -3,7 +3,7 @@ A map of the United States where each state is an equal sized square.
 ![map](https://github.com/charliesmart/d3-square-tile-map/blob/master/final_map.png)
 
 ### Getting Started
-Download and include either square-tile-map.js or square-tile-map.min.js. You'll also need to download and include Mike Bostock's [colorbrewer.js](https://github.com/mbostock/d3/tree/master/lib/colorbrewer), which is based on Cynthia Brewer's ColorBrewer palettes.
+Download and link either square-tile-map.js or square-tile-map.min.js. You'll also need to download and link Mike Bostock's [colorbrewer.js](https://github.com/mbostock/d3/tree/master/lib/colorbrewer), which is based on Cynthia Brewer's ColorBrewer palettes.
 
 ### Rendering the Map
 Create the element that will contain your map.
@@ -33,7 +33,7 @@ To change properties of the map, use the `setAttr()` method. This method takes a
 ```javascript
 d3.squareMap.setAttr({
     colorSet: 'Greens',
-    labelStyle: 'full'
+    labelStyle: 'abbr'
 }).render('data.csv', '.map-container');
 ```
 The following table contains a list of all modifiable properties.

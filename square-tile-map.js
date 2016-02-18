@@ -596,6 +596,7 @@ d3.squareMap = {
         var max = d3.max(this.data);
         // Set the scale domain
         this.scale.domain([min, max]);
-    }
-
+    }, onClick: function(userFunction) {
+        this.map.onclick = userFunction;
+    },
 }

@@ -362,6 +362,15 @@ d3.squareMap = {
             "y": 216,
             "w": 66,
             "h": 66
+        },        
+        "PR": {
+            "abbr": "PR",
+            "full": "Puerto Rico",
+            "ap": "P.R.",
+            "x": 720,
+            "y": 504,
+            "w": 66,
+            "h": 66
         },
         "RI": {
             "abbr": "RI",
@@ -535,6 +544,12 @@ d3.squareMap = {
                 return d.y; // Set y dynamically
             }).attr('fill', function(d) {
                 return d3.squareMap.scale(d.stateData); // Set the colors of each state using our data and scale
+            }).attr('display', function(d) {
+                if (d.stateData) {
+                    return
+                } else {
+                    return 'none'
+                }
             });
 
             // If the user wants labels, generate them
